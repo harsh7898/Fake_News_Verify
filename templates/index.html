@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Verify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="heading">Fake News Verify</h1>
+            <p class="description">Check if the news is fake or true using advanced AI techniques.</p>
+        </header>
+        <section class="about">
+            <h2>Why to use</h2>
+            <p>This website help individuals distinguish between fake and true news articles using AI technology . 
+                With the rise of misinformation on the internet, it's essential to have tools that can provide insights into the credibility of news sources. 
+                By analyzing various linguistic and contextual features, we can predict the likelihood of news articles being accurate or fabricated.</p>
+        </section>
+        <form method="POST">
+            <label for="user_input">Enter a news text:</label><br>
+            <textarea id="user_input" name="user_input" rows="4" cols="50" placeholder="Type your news here..."></textarea><br><br>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if predicted_class %}
+        <div class="prediction">
+            <h2>Prediction:</h2>
+            <h2>{{ predicted_class }}</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
