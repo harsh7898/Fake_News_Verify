@@ -26,7 +26,6 @@ By unifying these components, we've created a comprehensive solution that not on
 
 
 
-
 ## Demo
 
 ![Animation](https://github.com/harsh7898/Fake_News_Verify/assets/46092423/29e8ec4b-7851-4a1e-81ea-fa6ee8b1e437)
